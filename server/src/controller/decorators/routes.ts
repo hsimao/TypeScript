@@ -1,4 +1,5 @@
 import 'reflect-metadata'
+import { Methods } from './Methods'
 
 function routeBider(method: string) {
   return function (path: string) {
@@ -9,8 +10,8 @@ function routeBider(method: string) {
   }
 }
 
-export const get = routeBider('get')
-export const put = routeBider('put')
-export const post = routeBider('post')
-export const del = routeBider('delete')
-export const patch = routeBider('patch')
+export const get = routeBider(Methods.get)
+export const put = routeBider(Methods.put)
+export const post = routeBider(Methods.post)
+export const del = routeBider(Methods.del)
+export const patch = routeBider(Methods.patch)
